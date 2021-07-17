@@ -16,12 +16,14 @@ namespace CalculatorApp
             return $"Your calculation history is: {firstNumber} {op_type} {secondNumber} = {results}";
         }
 
+        //declaring a list of calculation histories.
+        public static List<Calculator> calculationsHistory = new List<Calculator>();
         
         //method for performing the operations.
         public static double PerformOperation(double firstNum, double secondNum, string operation_type)
         {
             //declaring a list of calculation histories.
-            List<Calculator> calculationsHistory = new List<Calculator>();
+            //List<Calculator> calculationsHistory = new List<Calculator>();
 
             double result = 0; //the default value of result.
 
@@ -86,50 +88,16 @@ namespace CalculatorApp
             //print result to the console
             Console.WriteLine($"Calculation: {firstNum} {operation_type} {secondNum}", firstNum, operation_type, secondNum);
             Console.WriteLine("Your result is "+ result);
-            Console.WriteLine("\n");
-            Console.WriteLine("Press any key to exit the program");
             Console.ReadKey();
             return 0;
         }
 
         public static void History()
         {
-            foreach (var savedCalculation in calculationsHistory)
+            foreach (Calculator savedCalculation in calculationsHistory)
             {
                 Console.WriteLine(savedCalculation);
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// public string nickName { get; set; }
-//         public double firstNum { get; set; }
-//         public double secondNum { get; set; }
-//         public double result { get; set; }
-//         public string operation_type { get; set; }
-
-//         public static double CalculationHistory(double firstNumber, double secondNumber, string operation, double results)
-//         {
-//             firstNum = firstNumber;
-//             secondNum = secondNumber;
-//             operation_type = operation;
-//             result = results;
-//         }
