@@ -16,14 +16,12 @@ namespace CalculatorApp
             return $"Your calculation history is: {firstNumber} {op_type} {secondNumber} = {results}";
         }
 
-        //declaring a list of calculation histories.
+        //declaring a list of calculationsHistory to hold all calculation histories.
         public static List<Calculator> calculationsHistory = new List<Calculator>();
         
         //method for performing the operations.
         public static double PerformOperation(double firstNum, double secondNum, string operation_type)
         {
-            //declaring a list of calculation histories.
-            //List<Calculator> calculationsHistory = new List<Calculator>();
 
             double result = 0; //the default value of result.
 
