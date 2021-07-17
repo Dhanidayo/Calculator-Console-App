@@ -68,7 +68,7 @@ namespace CalculatorApp
                     calculationsHistory.Add(new Calculator() { firstNumber = firstNum, op_type = operation_type, secondNumber =  secondNum, results = result });
                     break;
                 }
-                case "root":
+                case "root": //this option is still under construction. Need help implementing it independent of other options.
                 {
                     Console.WriteLine("Enter a number:");
                     double rootNum = Convert.ToDouble(Console.ReadLine());
@@ -78,6 +78,7 @@ namespace CalculatorApp
                 }
                 default:
                 {
+                    Console.WriteLine("----------------------------------------------------");
                     Console.WriteLine("{0} is an invalid operator", operation_type);
                     break;
                 }
